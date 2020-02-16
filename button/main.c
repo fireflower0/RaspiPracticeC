@@ -12,11 +12,12 @@ int main(void) {
   pinMode(GPIO25, INPUT);
   pullUpDnControl(GPIO25, PUD_UP);
 
-  for(;;) {
+  while(1) {
     if(digitalRead(GPIO25) == 0){
       digitalWrite(GPIO14, 1);
     } else {
       digitalWrite(GPIO14, 0);
     }
+    delay(500);
   }
 }
