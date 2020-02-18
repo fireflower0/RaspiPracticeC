@@ -15,6 +15,6 @@ int main(void) {
     if(digitalRead(GPIO25) == 0){
       printf("Button Pressed\n");
     }
-    delay(500);
+    delay(300);
   }
 }
