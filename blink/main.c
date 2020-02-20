@@ -1,4 +1,3 @@
-// gcc -o blink main.c -l wiringPi
 #include <wiringPi.h>
 #define GPIO14 14
 
