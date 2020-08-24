@@ -3,7 +3,7 @@ GCC    = gcc
 LIB    = wiringPi
 
 all:
-	$(GCC) -o $(TARGET) main.c $< -l $(LIB)
+	$(GCC) -O0 -o $(TARGET) main.c $< -l $(LIB)
 
 clean:
 	rm $(TARGET)

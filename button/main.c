@@ -8,13 +8,16 @@ int main(void) {
   if(wiringPiSetupGpio() == -1) {
     return -1;
   }
+
   pinMode(GPIO25, INPUT);
   pullUpDnControl(GPIO25, PUD_UP);
 
   while(1) {
-    if(digitalRead(GPIO25) == 0){
-      printf("Button Pressed\n");
+    if(digitalRead(GPIO25) == 0) {
+      printf("Switch ON\n");
+    } else {
+      printf("Switch OFF\n");
     }
-    delay(300);
+    delay(500);
   }
 }
